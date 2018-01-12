@@ -15,7 +15,7 @@ public class FirstGame extends NumberGame {
 		long seed = System.nanoTime();
 		Random rand = new Random(seed);
 		this.secret = rand.nextInt(100) + 1;
-		System.out.printf("I'm thinking of a number between 1 and %d.\n", upperBound);
+		setMessage(String.format("I'm thinking of a number between 1 and %d.", upperBound));
 		
 	}
 	

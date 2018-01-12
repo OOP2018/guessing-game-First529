@@ -7,7 +7,7 @@ public class GameSolver {
 	
 	/**
 	 * Play a NumberGame and return the solution.
-	 * The NumberGame will provide and display the messages from the method getMessage()
+	 * The NumberGame will provide the messages from the method getMessage()
 	 * containing the phrase "too small" and "too large".
 	 * 
 	 * @param game is the NumberGame too solve
@@ -15,14 +15,24 @@ public class GameSolver {
 	 */
 	
 	public int play(NumberGame game) {
-		int sol = 0;
-		for (int i = 0;i < game.getUpperBound();i++) {
-			sol++;
-			if (game.guess(i)) {
-				break;
+
+		
+		int max = game.getUpperBound();
+		int min = 0;
+		int solution;
+		boolean a = false;
+		do {
+			solution = (max + min)/2;
+			a = game.guess(solution);
+			if (game.getMessage().contains("small")) {
+				min = solution;
 			}
-		}
-		return sol;
+			if (game.getMessage().contains("large")) {
+				max = solution;
+			}
+		} while (!a);
+		return solution;
+	
 	}
 
 }

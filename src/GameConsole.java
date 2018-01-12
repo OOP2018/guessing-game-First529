@@ -15,10 +15,11 @@ public class GameConsole {
 		
 		// This is just an example.
 		while (true) {
+			System.out.println( game.getMessage() );
 			System.out.print("Your answer? ");
 			guess = console.nextInt();
 			boolean correct = game.guess(guess);
-			System.out.println( game.getMessage() );
+			
 			if (correct) {
 				break;
 			}
