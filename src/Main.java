@@ -9,7 +9,9 @@ public class Main {
 		int upperBound = 100;
 		NumberGame game = new FirstGame(upperBound);
 		GameConsole ui = new GameConsole( );
+		GameSolver s = new GameSolver();
 		int solution = ui.play( game );
 		System.out.printf("The secret number is %d and the total guesse(s) is %d", solution, game.getCount() );
+		System.out.println(s.play(game));
 	}
 }

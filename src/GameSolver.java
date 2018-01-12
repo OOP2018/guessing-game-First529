@@ -17,9 +17,9 @@ public class GameSolver {
 	public int play(NumberGame game) {
 		int sol = 0;
 		for (int i = 0;i < game.getUpperBound();i++) {
-			if (!game.guess(i)) {
-				sol++;
-				continue;
+			sol++;
+			if (game.guess(i)) {
+				break;
 			}
 		}
 		return sol;
