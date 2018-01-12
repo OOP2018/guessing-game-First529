@@ -53,6 +53,14 @@ public class NumberGame {
 	public int getUpperBound() {
 		return Integer.MAX_VALUE;  // not very helpful :-)
 	}
+	
+	/**
+	 * The method is created to enable polymorphism. 
+	 * @return 0
+	 */
+	public int getCount() {
+		return 0;
+	}
     
     /**
      * toString describes the game or problem.
