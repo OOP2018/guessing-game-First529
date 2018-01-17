@@ -20,17 +20,17 @@ public class GameSolver {
 		int max = game.getUpperBound();
 		int min = 0;
 		int solution;
-		boolean a = false;
+		boolean answer = false;
 		do {
 			solution = (max + min)/2;
-			a = game.guess(solution);
+			answer = game.guess(solution);
 			if (game.getMessage().contains("small")) {
 				min = solution;
 			}
 			if (game.getMessage().contains("large")) {
 				max = solution;
 			}
-		} while (!a);
+		} while (!answer);
 		return solution;
 	
 	}

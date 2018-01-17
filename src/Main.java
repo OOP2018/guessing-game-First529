@@ -11,7 +11,7 @@ public class Main {
 		GameConsole ui = new GameConsole( );
 		GameSolver s = new GameSolver();
 		int solution = ui.play( game );
-		System.out.printf("The secret number is %d and the total guess(es) is %d\n", solution, game.getCount() );
+		System.out.printf("The secret number is %d and the total guess(es) is/are %d\n", solution, game.getCount() );
 		// GameSolver solution
 		System.out.println(s.play(game));
 	}
