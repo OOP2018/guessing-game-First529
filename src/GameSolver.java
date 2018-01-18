@@ -25,10 +25,10 @@ public class GameSolver {
 			solution = (max + min)/2;
 			answer = game.guess(solution);
 			if (game.getMessage().contains("small")) {
-				min = solution;
+				min = solution + 1;
 			}
 			if (game.getMessage().contains("large")) {
-				max = solution;
+				max = solution - 1;
 			}
 		} while (!answer);
 		return solution;

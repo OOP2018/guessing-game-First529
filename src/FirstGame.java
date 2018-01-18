@@ -12,7 +12,10 @@ public class FirstGame extends NumberGame {
 	/** count the number of guesses*/
 	private int count;
 	
-	/** initialize the game*/
+	/** 
+	 * initialize the game
+	 * @param upperbound
+	 */
 	public FirstGame ( int upperbound ) {
 		this.upperBound = upperbound;
 		long seed = System.nanoTime();
