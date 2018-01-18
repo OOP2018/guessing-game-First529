@@ -22,7 +22,7 @@ public class GameSolver {
 		int solution;
 		boolean answer = false;
 		do {
-			solution = (max + min)/2;
+			solution = min + (max - min)/2;
 			answer = game.guess(solution);
 			if (game.getMessage().contains("small")) {
 				min = solution + 1;
