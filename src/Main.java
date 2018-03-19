@@ -17,6 +17,7 @@ public class Main extends Application{
 
 	@Override
 	public void start(Stage primaryStage) {
+		
 		try {
 			
 			URL url = this.getClass().getResource("GameUI.fxml");
@@ -42,6 +43,8 @@ public class Main extends Application{
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		
+		
 	}
 	
 	public static void main(String[] args) {
